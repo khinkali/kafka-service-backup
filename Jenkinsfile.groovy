@@ -24,7 +24,7 @@ podTemplate(label: 'mypod', containers: [
         stage('create backup') {
             currentBuild.displayName = getTimeDateDisplayName()
 
-            def kc = 'kubectl -n'
+            def kc = 'kubectl -n test'
             def containerPath = '/var/lib/postgresql/data'
             def containerName = 'kafka-backup-db'
             def podLabel = 'app=kafka-backup-db'
