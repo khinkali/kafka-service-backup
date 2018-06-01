@@ -42,5 +42,6 @@ podTemplate(label: 'mypod', containers: [
                 message: "Build Failed - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)",
                 teamDomain: 'khikali',
                 token: 'slack-token'
+        currentBuild.result = 'FAILURE'
     }
 }
